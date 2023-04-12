@@ -1,15 +1,22 @@
 import { Schema, model } from 'mongoose'
-
-const userSchema = new Schema({
+const UserSchema = new Schema({
     firstName: {
         required: true,
-        type: String
+        type: String,
     },
-    lastName: String,
-    age: Number
+    lastName: {
+        required: true,
+        type: String,
+    },
+    email: {
+        required: true,
+        type: String,
+    },
+    age: {
+        type: Number
+    }
 }, {
-    timestamps: true 
-    //campos de auditoria "createdAt"
+    timestamps: true
 })
 
-export default model('User', userSchema)
+export default model('User', UserSchema)

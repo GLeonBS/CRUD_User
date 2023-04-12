@@ -1,5 +1,6 @@
 export interface UserTypes {
     firstName :String,
-    Lastname: String,
+    lastName: String,
+    email: String,
     age: Number
 }
