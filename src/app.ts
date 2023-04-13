@@ -25,7 +25,7 @@ class App {
     private async database() {
         try {
             mongoose.set("strictQuery", true)
-            await mongoose.connect('')
+            await mongoose.connect('mongodb://0.0.0.0:27017/users')
             console.log("Connect database sucess")
         } catch(err) {
             console.error('Connect database fail, error: ', err)
